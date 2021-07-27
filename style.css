@@ -22,6 +22,14 @@ body{
     border: 5px solid var(--accentColor);
 }
 
+#hyperlink{
+  color: #c0cbdc;
+}
+
+#hyperlink:hover{
+  color: #DCD1C0;
+}
+
 #userName{
     color: #c0cbdc;
     font-size: 1.5rem;
