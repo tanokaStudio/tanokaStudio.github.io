@@ -56,17 +56,77 @@ body{
     margin-bottom: 30px;
     padding: 13px;
     text-decoration: none;
-    text-transform: ;
     font-size: 1rem;
     transition: all .25s cubic-bezier(.08,.59,.29,.99);
     border: solid var(--accentColor) 2px;
-    border-radius: 50px;
+    border-radius: 5px;
+    min-width: 400px;
 }
 
 .link:hover{
     background-color: var(--bgColor);
     color: var(--accentColor);
-    font-style: bold;
+    font-family: var(--font);
+    text-align: center;
+    border: solid var(--accentColor) 2px;
+    text-decoration: none;
+    text-transform: ;
+    font-size: 1rem;
+}
+
+.email{
+  display: block;
+  min-width: 400px;
+  background-color: var(--accentColor);
+  color: var(--bgColor);
+  font-family: var(--font);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 13px;
+  border: solid var(--accentColor) 2px;
+  transition: all .25s cubic-bezier(.08,.59,.29,.99);
+  border-radius: 15px;
+}
+
+.email:hover{
+  background-color: var(--bgColor);
+  color: var(--accentColor);
+  font-family: var(--font);
+  text-align: center;
+  border: solid var(--accentColor) 2px;
+  text-decoration: none;
+  text-transform: ;
+  font-size: 1rem;
+}
+
+.button{
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    font-family: var(--font);
+    text-align: center;
+    padding: 13px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    border: solid var(--accentColor) 2px;
+    border-radius: 5px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.button:hover{
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+    font-family: var(--font);
+    text-align: center;
+    border: solid var(--accentColor) 2px;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .footer {
