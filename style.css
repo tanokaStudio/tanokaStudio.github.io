@@ -38,6 +38,15 @@ body{
     max-width: 675px;
     width: 100%;
 }
+
+iframe {
+    display: inline;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+
 .link{
     display: block;
     background-color: var(--accentColor);
