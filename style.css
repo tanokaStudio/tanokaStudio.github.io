@@ -61,6 +61,8 @@ body{
 }
 
 .footer {
+    font-family: var(--font);
+    font-style: italic;
     color: #c0cbdc;
     font-size: 1.3rem;
 }
