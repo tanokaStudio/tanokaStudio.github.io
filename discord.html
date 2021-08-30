@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="3; URL=https://discord.gg/FJyXzAZa22" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+  <img id="userPhoto" src="./TanokaStudio_LogoWhite.png" alt="User Photo">
+  <p id="userName">If you are not redirected in
+  <a id="compteEnrera"> 3 </a>
+  seconds, <a id="hyperlink" href="https://discord.gg/FJyXzAZa22">click here</a>.</p>
+
+  <script type="text/javascript">
+      var countSeconds = 3;
+      var x = setInterval(function() {
+        document.getElementById("compteEnrera").innerHTML = countSeconds;
+        countSeconds -= 1;
+      }, 1000);
+  </script>
+
+
+</body>
+<div class="footer">
+    <hr>
+    Made with ❤ by the Tanoka Team
+</div>
+</html>
