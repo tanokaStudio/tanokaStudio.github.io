@@ -3,7 +3,8 @@
 :root {
     --bgColor: #262b44;
     --accentColor: #ffab36;
-    --font: 'Roboto Slab', serif;
+    --accentColor2: #a33d8a;
+    --font: Helvetica, "Trebuchet MS", Arial, sans-serif;
 }
 
 body{
@@ -23,10 +24,10 @@ h2{
 }
 
 #userPhoto{
-    width: 20%;
-    height: 20%;
+    max-width: 20%;
+    max-height: 20%;
     border-radius: 50%;
-    border: 5px solid var(--accentColor);
+    border: 5px dotted var(--accentColor);
 }
 
 #hyperlink{
@@ -35,6 +36,14 @@ h2{
 
 #hyperlink:hover{
   color: #DCD1C0;
+}
+
+#info {
+  color: white;
+  font-size: 1.12rem;
+  line-height: 1.25;
+  font-family: var(--font);
+  text-align: justify;
 }
 
 #userName{
@@ -59,6 +68,18 @@ h2{
     border: none;         /* Reset default border */
     height: 100vh;        /* Viewport-relative units */
     width: 100vw;
+}
+
+#importantLink {
+  color: white;
+  background-color: var(--accentColor2);
+  border: solid var(--accentColor2) 2px;
+}
+
+#importantLink:hover {
+  color: white;
+  background-color: var(--bgColor);
+  border: solid var(--accentColor2) 2px;
 }
 
 .link{
