@@ -4,7 +4,7 @@
     --bgColor: #262b44;
     --accentColor: #ffab36;
     --accentColor2: #a33d8a;
-    --font: Helvetica, "Trebuchet MS", Arial, sans-serif;
+    --font: Lato, Helvetica, "Trebuchet MS", Arial, sans-serif;
 }
 
 body{
@@ -96,6 +96,7 @@ h2{
     border: solid var(--accentColor) 2px;
     border-radius: 5px;
     min-width: 20%;
+    font-weight: bold;
 }
 
 .link:hover{
