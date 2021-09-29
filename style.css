@@ -27,7 +27,7 @@ h2{
     max-width: 20%;
     max-height: 20%;
     border-radius: 50%;
-    border: 5px dotted var(--accentColor);
+    border: 5px solid var(--accentColor);
 }
 
 #hyperlink{
