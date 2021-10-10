@@ -4,6 +4,7 @@
     --bgColor: #262b44;
     --accentColor: #ffab36;
     --accentColor2: #a33d8a;
+	--accentColor3: #2dac2d;
     --font: Lato, Helvetica, "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -80,6 +81,18 @@ h2{
   color: white;
   background-color: var(--bgColor);
   border: solid var(--accentColor2) 2px;
+}
+
+#importantLink2 {
+  color: white;
+  background-color: var(--accentColor3);
+  border: solid var(--accentColor3) 2px;
+}
+  
+#importantLink2:hover {
+	color: white;
+	background-color: var(--bgColor);
+	border: solid var(--accentColor3) 2px;
 }
 
 .link{
