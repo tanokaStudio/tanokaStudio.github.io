@@ -583,3 +583,95 @@ footer ul.links a svg:hover path {
     border-radius: 50%;
     border: 5px solid var(--accentColor);
 }
+
+#pagePhoto{
+    display: inline-block;
+    max-width: 20%;
+    border-radius: 10%;
+    border: 5px solid var(--accentColor);
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+
+  border: 0;
+}
+form fieldset{
+  border: 0;
+}
+
+	form label {
+		display: block;
+		color: #363636;
+		margin: 0 0 1em 0;
+    border: 0;
+  	}
+
+	form input[type="text"],
+	form input[type="email"],
+	form input[type="password"],
+	form select,
+	form textarea {
+		-webkit-appearance: none;
+		border: 0;
+		background: #f4f4f4;
+		padding: 0.75em;
+		width: 90%;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+
+		form input[type="text"]:focus,
+		form input[type="email"]:focus,
+		form input[type="password"]:focus,
+		form select:focus,
+		form textarea:focus {
+			background: #f8f8f8;
+		}
+
+	form input[type="text"],
+	form input[type="email"],
+	form input[type="password"],
+	form select {
+		line-height: 1.35em;
+	}
+
+	form ::-webkit-input-placeholder {
+		color: #999;
+	}
+
+	form :-moz-placeholder {
+		color: #999;
+	}
+
+	form ::-moz-placeholder {
+		color: #999;
+	}
+
+	form :-ms-input-placeholder {
+		color: #999;
+	}
+
+input.sendMsg{
+  height: 55px;
+  font-weight: 200;
+  font-size: 25px;
+  padding: 0 15px;
+  text-decoration: none;
+  line-height: 53px;
+  color: var(--bgColor);;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid var(--accentColor);;
+  background-color: var(--accentColor);;
+  transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  margin-right: 10px;
+  }
+
+input.sendMsg:hover {
+      background-color: var(--accentColor2);;
+      border-color: var(--accentColor2);;
+}

@@ -1,0 +1,186 @@
+/* Style Settings */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+:root {
+    --bgColor: #262b44;
+    --accentColor: #ffab36;
+    --accentColor2: #a33d8a;
+	--accentColor3: #2dac2d;
+    --font: Lato, Helvetica, "Trebuchet MS", Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bgColor);
+}
+
+h2{
+  color: #c0cbdc;
+  font-size: 1.5rem;
+  font-family: var(--font);
+  text-align: center;
+}
+
+#userPhoto{
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 50%;
+    border: 5px solid var(--accentColor);
+}
+
+#hyperlink{
+  color: #c0cbdc;
+}
+
+#hyperlink:hover{
+  color: #DCD1C0;
+}
+
+#info {
+  color: #c0cbdc;
+  font-size: 1.12rem;
+  line-height: 1.25;
+  font-family: var(--font);
+  text-align: justify;
+}
+
+#userName{
+    color: #c0cbdc;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-style: italic;
+}
+
+#links{
+    max-width: 675px;
+    width: 100%;
+}
+
+#contactForm {
+    display: inline;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+
+#importantLink {
+  color: white;
+  background-color: var(--accentColor2);
+  border: solid var(--accentColor2) 2px;
+}
+
+#importantLink:hover {
+  color: white;
+  background-color: var(--bgColor);
+  border: solid var(--accentColor2) 2px;
+}
+
+#importantLink2 {
+  color: white;
+  background-color: var(--accentColor3);
+  border: solid var(--accentColor3) 2px;
+}
+  
+#importantLink2:hover {
+	color: white;
+	background-color: var(--bgColor);
+	border: solid var(--accentColor3) 2px;
+}
+
+.link{
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    font-family: var(--font);
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 13px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    border: solid var(--accentColor) 2px;
+    border-radius: 5px;
+    min-width: 20%;
+    font-weight: bold;
+}
+
+.link:hover{
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+    font-family: var(--font);
+    text-align: center;
+    border: solid var(--accentColor) 2px;
+    text-decoration: none;
+    text-transform: ;
+    font-size: 1rem;
+}
+
+.email{
+  display: block;
+  min-width: 50%;
+  background-color: var(--accentColor);
+  color: var(--bgColor);
+  font-family: var(--font);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 13px;
+  border: solid var(--accentColor) 2px;
+  transition: all .25s cubic-bezier(.08,.59,.29,.99);
+  border-radius: 15px;
+}
+
+.email:hover{
+  background-color: var(--bgColor);
+  color: var(--accentColor);
+  font-family: var(--font);
+  text-align: center;
+  border: solid var(--accentColor) 2px;
+  text-decoration: none;
+  text-transform: ;
+  font-size: 1rem;
+}
+
+.button{
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    font-family: var(--font);
+    text-align: center;
+    padding: 13px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    border: solid var(--accentColor) 2px;
+    border-radius: 5px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.button:hover{
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+    font-family: var(--font);
+    text-align: center;
+    border: solid var(--accentColor) 2px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer {
+    font-family: var(--font);
+    font-style: italic;
+    color: #c0cbdc;
+    font-size: 1.3rem;
+}

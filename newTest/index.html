@@ -33,17 +33,21 @@
         <img src="./assets/img/logoNew.png"> </img>
         <h1>Embark on an epic adventure where weapons are fish and nothing is what you expect! </h1>
         <ul class="takeActionBtns">
+            <!--
             <a scrolllink="#download" class="download scrollLink">Play Now</a>
-            <a scrolllink="#about" class="learnMore scrollLink">Learn More</a>
+-->
+            <a scrolllink="#about" class="download scrollLink">Learn More</a>
         </ul>
     </header>
 
     <section id="about">
         <h1 class="headerLine">Sails of Stillwaters</h1>
         <div class="lineContainer"><div class="line"></div></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Embark on an adventure of epic proportions in an attempt to discover what has happened to your father. Defy the trials of the gods and proclaim yourself victorious in a world that is trying to sink you. Relax with your friends in the village or explore the mysterious islands surrounding your home. Choose your own destiny.</p>
         <br>
-        <a scrolllink="#template" class="learnMore scrollLink">Learn More</a>
+        <img id="pagePhoto" src="./assets/img/room.png" alt="Image of a room of the game"></img>
+        <br>
+        <a href="https://tanoka.studio/hookedPressKit/" target="_blank" class="learnMore scrollLink">Learn More</a>
 
     </section>
 
@@ -86,13 +90,40 @@
         </div>
     </section>
 
+
     <section id="download">
-        <h1 class="headerLine">Try the demo of Sails of Stillwaters today!</h1>
+
+        <h1 class="headerLine">Have something to say? Get in contact with us!</h1>
         <div class="lineContainer"><div class="line"></div></div>
+          <!--
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <br>
         <a href="https://html5rocket.github.io/assets/downloads/Carbon.zip" download>Try Now</a>
+
+      -->
+      <form
+        name="simple-contact-form"
+        accept-charset="utf-8"
+        action="https://formspree.io/f/mdobezey"
+        method="post"
+      >
+
+        <fieldset id="fs-frm-inputs">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="name" id="full-name" placeholder="Name" required="">
+          <label for="email-address">Email Address</label>
+          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+          <label for="message">Message</label>
+          <textarea style="resize: none;" rows="5" name="message" id="message" placeholder="Enter your message" required=""></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <br>
+        <input class="sendMsg" type="submit" value="Submit">
+      </form>
+
+
     </section>
+
 
     <section id="team">
         <h1 class="headerLine">Our Team</h1>
@@ -151,6 +182,32 @@
 
         </ul>
     </section>
+
+    <!-- Begin Mailchimp Signup Form -->
+    <section id="download">
+    <div id="mc_embed_signup">
+    <form action="https://github.us6.list-manage.com/subscribe/post?u=6505849bf49bcaff2db5a5ffb&amp;id=8d802b03d5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="links">
+          <hr>
+          <br>
+    	     <label id="userName" for="mce-EMAIL">Let’s stay in touch! Subscribe to our newsletter</label>
+    	      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_6505849bf49bcaff2db5a5ffb_8d802b03d5" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <br>
+              <input class="sendMsg" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+            <br>
+            <hr>
+        </div>
+    </form>
+    </div>
+  </section id="download">
+
+<!--End mc_embed_signup-->
 
     <footer>
         <ul class="links">
