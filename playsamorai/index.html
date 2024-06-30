@@ -22,20 +22,25 @@
 
     <meta name="author" content="Tanoka Studio">
 
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="./header.png">
-    <meta property="og:title" content="Tanoka Studio">
-    <meta property="og:description"
-        content="Sail on an amazing journey in an attempt to discover what has happened to your father. Defy the trials of the gods and proclaim yourself victorious in a world that is trying to sink you. Relax with your friends in the village or explore the mysterious islands surrounding your home. Choose your own destiny.">
-    <meta property="og:url" content="https://tanoka.studio/">
-    <meta property="og:site-name" content="tanoka.studio">
+    <!-- Primary Meta Tags -->
+    <title>Download SamORai</title>
+    <meta name="title" content="Download SamORai" />
+    <meta name="description" content="Download and play now the latest game from Tanoka Studio" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@tanokaStudio">
-    <meta name="twitter:title" content="Tanoka Studio">
-    <meta name="twitter:description"
-        content="Sail on an amazing journey in an attempt to discover what has happened to your father. Defy the trials of the gods and proclaim yourself victorious in a world that is trying to sink you. Relax with your friends in the village or explore the mysterious islands surrounding your home. Choose your own destiny.">
-    <meta name="twitter:image" content="./header.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tanoka.studio/playsamorai/" />
+    <meta property="og:title" content="Download SamORai" />
+    <meta property="og:description" content="Download and play now the latest game from Tanoka Studio" />
+    <meta property="og:image" content="header.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tanoka.studio/playsamorai/" />
+    <meta property="twitter:title" content="Download SamORai" />
+    <meta property="twitter:description" content="Download and play now the latest game from Tanoka Studio" />
+    <meta property="twitter:image" content="header.png" />
+
 
     <link rel="icon" type="image/png" href="Face.png">
 
@@ -57,9 +62,19 @@
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: #260d25;
+    }
+
+    background-image>* {
+        filter: drop-shadow(-5px -5px 5px #2228);
+        width: 120%;
     }
 
     play-now-container {
@@ -86,7 +101,7 @@
         font-size: 10vh;
     }
 
-    .link{
+    .link {
         text-decoration: none;
         font-size: 4vh;
         color: whitesmoke;
@@ -97,15 +112,27 @@
 </style>
 
 <body>
-    <background-image>
-        <img style="min-width:100%;min-height:100%;" src="FONDU.png" />
+    <background-image id="scene" data-origin-y="1" data-origin-x="0">
+
+        <img data-depth="0" src="./parallax/bk_001.png" />
+
+        <img data-depth="0.05" src="./parallax/bk_002.png" />
+
+
+        <img data-depth="0.1" src="./parallax/bk_003.png" />
+        <img data-depth="0.3" src="./parallax/bk_004.png" />
+        <img data-depth="0.5" src="./parallax/bk_005.png" />
+        <img data-depth="1" src="./parallax/bk_006.png" />
+
+        <img data-depth="1.5"   src="./parallax/bk_007.png" />
+
     </background-image>
     <play-now-container>
         <h1>Play now</h1>
         <play-button>
             <center>
-                <a
-                    href='https://play.google.com/store/apps/details?id=com.tanokastudio.samorai&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <a href='https://play.google.com/store/apps/details?id=com.tanokastudio.samorai&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                    target="_blank">
                     <img style="max-width:90%;max-height:80%;" alt='Get it on Google Play'
                         src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
             </center>
@@ -113,5 +140,13 @@
         <a href="https://youtu.be/cs6k2jKohZI" class="link" target="_blank">Watch trailer</a>
     </play-now-container>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script>
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene, {
+
+    });
+</script>
 
 </html>
