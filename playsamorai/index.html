@@ -62,7 +62,7 @@
         font-family: go0v2;
         margin: 0;
         height: 100vh;
-        background-color: #bd1060;
+        background-color: #260C25;
         overflow: hidden;
     }
 
@@ -125,13 +125,12 @@
         background-color: #260C25;
         position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
-        
     }
 
     .parallax-wrap img {
@@ -141,21 +140,21 @@
         width: 105vw;
         height: auto;
         pointer-events: none;
-        top: 10vh;
+        bottom: 0;
+        filter: blur(0.5px);
     }
 
     .parallax-wrap img:first-child {
         padding-top: 0;
         top: 0px;
         left: 0px;
-        height: 65%;
+        height: 100%
     }
-    .parallax-wrap img:nth-child(6) {
-        top: 12vh;
-    }
+
+    .parallax-wrap img:nth-child(6) {}
+
     .parallax-wrap img:nth-child(7) {
-        width: 120vw;
-        top: 9vh;
+        width: 110vw;
         z-index: 3;
     }
 </style>
@@ -202,12 +201,6 @@
 </body>
 
 <script>
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene, {
-
-    });
-</script>
-<script>
     function diff(a, b) { return a - b; }
     function angDiff(x, y) { return Math.atan2(y, x); }
     function deltaAngle(source, target) {
@@ -238,13 +231,13 @@
         var deltaX = deltaAngle(initialGyroX, gyroX);
         var deltaY = deltaAngle(initialGyroY, gyroY);
 
-        console.log("x",deltaX)
-        console.log("y",deltaY)
-        if (gyroX > maxGyroX){ maxGyroX = gyroX }
-        if (gyroY > maxGyroY){ maxGyroY = gyroY }
+        console.log("x", deltaX)
+        console.log("y", deltaY)
+        if (gyroX > maxGyroX) { maxGyroX = gyroX }
+        if (gyroY > maxGyroY) { maxGyroY = gyroY }
         parallax({
-            pageX : (deltaAngle(initialGyroX, event.alpha) / 360) * window.innerWidth,
-            pageY : (deltaAngle(initialGyroY, event.beta) / 360) * window.innerHeight
+            pageX: (deltaAngle(initialGyroX, event.alpha) / 360) * window.innerWidth,
+            pageY: (deltaAngle(initialGyroY, event.beta) / 360) * window.innerHeight
         })
     }
     if (window.DeviceOrientationEvent) {
@@ -253,16 +246,12 @@
         console.log("DeviceOrientationEvent is not supported");
     }
 
-    let gyroscope = new Gyroscope({ frequency: 60 });
-    var initialGyroX = null;
-    var initialGyroY = null;
-    var maxGyroX = null;
-    var maxGyroY = null;
-    gyroscope.addEventListener("reading", (e) => {
-
-
-    });
-    gyroscope.start();
+    const sensor = new AbsoluteOrientationSensor();
+sensor.start();
+sensor.addEventListener("error", (error) => {
+  if (event.error.name === "SecurityError")
+    console.log("No permissions to use AbsoluteOrientationSensor.");
+});
 </script>
 
 </html>
