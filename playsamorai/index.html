@@ -52,10 +52,18 @@
         src: url(go3v2.ttf);
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
         padding: 0;
         font-family: go0v2;
+        margin: 0;
+        height: 100vh;
+        background-color: #bd1060;
+        overflow: hidden;
     }
 
     background-image {
@@ -108,11 +116,52 @@
         text-decoration: none;
         margin: 0px 0px;
         border-bottom: 0.5vh dotted whitesmoke;
+        z-index: 3;
+    }
+</style>
+
+<style>
+    .parallax-wrap {
+        background-color: #260C25;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        
+    }
+
+    .parallax-wrap img {
+        background-color: #ffdbc30f;
+        padding-top: 150px;
+        position: absolute;
+        width: 105vw;
+        height: auto;
+        pointer-events: none;
+        top: 10vh;
+    }
+
+    .parallax-wrap img:first-child {
+        padding-top: 0;
+        top: 0px;
+        left: 0px;
+        height: 65%;
+    }
+    .parallax-wrap img:nth-child(6) {
+        top: 12vh;
+    }
+    .parallax-wrap img:nth-child(7) {
+        width: 120vw;
+        top: 9vh;
+        z-index: 3;
     }
 </style>
 
 <body>
-    <background-image id="scene" data-origin-y="1" data-origin-x="0">
+    <background-image hidden id="scene" data-origin-y="1" data-origin-x="0">
 
         <img data-depth="0" src="./parallax/bk_001.png" />
 
@@ -124,9 +173,20 @@
         <img data-depth="0.5" src="./parallax/bk_005.png" />
         <img data-depth="1" src="./parallax/bk_006.png" />
 
-        <img data-depth="1.5"   src="./parallax/bk_007.png" />
+        <img data-depth="1.5" src="./parallax/bk_007.png" />
 
     </background-image>
+
+    <div class="parallax-wrap">
+        <img src="parallax/bk_001.png" value="0" />
+        <img src="parallax/bk_002.png" value="0.2" />
+        <img src="parallax/bk_003.png" value="0.3" />
+        <img src="parallax/bk_004.png" value="0.6" />
+        <img src="parallax/bk_005.png" value="1" />
+        <img src="parallax/bk_006.png" value="2" />
+        <img src="parallax/bk_007.png" value="5" />
+    </div>
+
     <play-now-container>
         <h1>Play now</h1>
         <play-button>
@@ -141,12 +201,68 @@
     </play-now-container>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script>
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene, {
 
     });
+</script>
+<script>
+    function diff(a, b) { return a - b; }
+    function angDiff(x, y) { return Math.atan2(y, x); }
+    function deltaAngle(source, target) {
+        d = target - source
+        d = (d + 180) % 360 - 180
+        return d
+    }
+    document.addEventListener("mousemove", parallax);
+    function parallax(event) {
+        const multiplier = 10;
+        document.querySelectorAll(".parallax-wrap img").forEach((shift) => {
+            const position = shift.getAttribute("value");
+            const x = multiplier * (diff(window.innerWidth / 2.0, event.pageX) / window.innerWidth) * position;
+            const y = multiplier / 2 * (diff(window.innerHeight, event.pageY) / window.innerHeight) * position;
+
+            shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+    }
+    function orientation(event) {
+        var gyroX = event.gamma;
+        var gyroY = event.beta
+        if (initialGyroX == null) {
+            initialGyroX = gyroX;
+            initialGyroY = gyroY;
+            maxGyroX = initialGyroX;
+            maxGyroY = initialGyroY;
+        }
+        var deltaX = deltaAngle(initialGyroX, gyroX);
+        var deltaY = deltaAngle(initialGyroY, gyroY);
+
+        console.log("x",deltaX)
+        console.log("y",deltaY)
+        if (gyroX > maxGyroX){ maxGyroX = gyroX }
+        if (gyroY > maxGyroY){ maxGyroY = gyroY }
+        parallax({
+            pageX : (deltaAngle(initialGyroX, event.alpha) / 360) * window.innerWidth,
+            pageY : (deltaAngle(initialGyroY, event.beta) / 360) * window.innerHeight
+        })
+    }
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener("deviceorientation", orientation, false);
+    } else {
+        console.log("DeviceOrientationEvent is not supported");
+    }
+
+    let gyroscope = new Gyroscope({ frequency: 60 });
+    var initialGyroX = null;
+    var initialGyroY = null;
+    var maxGyroX = null;
+    var maxGyroY = null;
+    gyroscope.addEventListener("reading", (e) => {
+
+
+    });
+    gyroscope.start();
 </script>
 
 </html>
