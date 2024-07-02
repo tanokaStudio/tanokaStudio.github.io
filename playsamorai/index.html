@@ -110,7 +110,7 @@
         position: absolute;
         width: 100vw;
         height: 100vh;
-        overflow: hidden;
+        //overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -272,13 +272,13 @@
 
     function parallaxPhone(event) {
         console.log(event)
-        const multiplier = 20;
+        const multiplier = 10;
         document.querySelectorAll(".parallax-wrap span").forEach((shift) => {
             const position = shift.getAttribute("value");
 
             // Obtener los valores del giroscopio
-            let gamma = event.gamma *4; // Inclinación izquierda/derecha
-            let beta = event.beta *4; // Inclinación adelante/atrás
+            let gamma = event.gamma *2; // Inclinación izquierda/derecha
+            let beta = event.beta *2; // Inclinación adelante/atrás
 
             // Ajustar los valores del giroscopio para que funcionen correctamente
             if (window.innerWidth > window.innerHeight) {
@@ -291,8 +291,7 @@
 
             // Calcular los valores de desplazamiento
             const x = multiplier * (diff(window.innerWidth / 2.0, gamma) / window.innerWidth) * position;
-            const y = multiplier / 2 * (diff(window.innerHeight, beta) / window.innerHeight) * position;
-            console.log('xy',x,y)
+            const y = multiplier / 2 * (diff(window.innerHeight / 2.0, beta) / window.innerHeight) * position;
             shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
         });
     }
