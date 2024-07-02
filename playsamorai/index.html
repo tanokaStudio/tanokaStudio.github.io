@@ -91,6 +91,14 @@
         font-size: 8vh;
         border-top: 0.5vh dashed black;
         border-bottom: 0.5vh dashed black;
+        -webkit-transform: skewY(2deg);
+        transform: skewY(2deg);
+        transition: transform 0.2s ease-out 100ms
+    }
+
+    h1:hover{
+        transform: scale(150%);
+        user-select: none; /* Standard syntax */
     }
 
     .link {
@@ -176,6 +184,29 @@
     }
 </style>
 
+<style>
+    .cross {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cross::before,
+    .cross::after {
+        content: '';
+        width: 150%;
+        position: absolute;
+        right: -25%;
+        top: 50%;
+        z-index: -1;
+    }
+
+    .cross::before {
+        border-bottom:  0.5vh dashed #2228;
+        -webkit-transform: skewY(-2deg);
+        transform: skewY(-2deg);
+    }
+</style>
+
 <body>
 
 
@@ -201,7 +232,7 @@
     </div>
 
     <play-now-container>
-        <h1>Play now</h1>
+        <h1 class="cross">Play now</h1>
         <play-button>
             <center>
                 <a href='https://play.google.com/store/apps/details?id=com.tanokastudio.samorai&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
@@ -211,7 +242,8 @@
             </center>
         </play-button>
         <a href="https://youtu.be/cs6k2jKohZI" class="link" target="_blank">Watch trailer</a>
-        <a style="font-size: 2vh;color:blanchedalmond;" href="../samOrai/index.html" class="link" target="_blank">Learn more</a>
+        <a style="font-size: 2vh;color:blanchedalmond;" href="../samOrai/index.html" class="link" target="_blank">Learn
+            more</a>
     </play-now-container>
 </body>
 
@@ -278,8 +310,8 @@
             const position = shift.getAttribute("value");
 
             // Obtener los valores del giroscopio
-            let gamma = event.gamma *2; // Inclinación izquierda/derecha
-            let beta = event.beta *2; // Inclinación adelante/atrás
+            let gamma = event.gamma * 2; // Inclinación izquierda/derecha
+            let beta = event.beta * 2; // Inclinación adelante/atrás
 
             // Ajustar los valores del giroscopio para que funcionen correctamente
             if (window.innerWidth > window.innerHeight) {
