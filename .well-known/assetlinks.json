@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.tanokastudio.samorai",
+      "sha256_cert_fingerprints": [
+        "96:CC:52:EB:25:A7:03:29:C9:A9:8F:42:82:1F:A1:25:10:DC:B5:57:61:DB:94:47:33:F3:30:D2:F1:E6:0F:79"
+      ]
+    }
+  }
+]
