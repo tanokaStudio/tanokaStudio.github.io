@@ -1,188 +1,340 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E098DDV3QV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-E098DDV3QV');
-</script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/1.2.0/css/uikit.gradient.min.css" rel="stylesheet" type="text/css">
-  <title>SamOrai Press Kit</title>
-  <meta name="description" content="All the info about samOrai by Tanoka studio"/>
-  <link rel="stylesheet" href="./css/style.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="SamOrai Press Kit"/>
-	<meta name="keywords" content="tanoka samOrai, samOrai presskit, tanoka press, samorai game, samorai, samorai game, video game, indie, tanoka indie, tanoka studio barcelona, tanoka barcelona, tanoka"/>
-	<meta property="og:image" content="./media/icon.png">
-	<meta charset="UTF-8">
-	<link rel="icon" href="./media/Face.png" type="image/x-icon"/>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-E098DDV3QV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-E098DDV3QV');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Download SamOrai now for Android">
+    <meta name="keywords" content="tanoka, samurai, video game, indie game, samorai game, arcade">
+    <title>Download SamORai</title>
+
+    <meta name="google-site-verification" content="JA3UddBodTbFruxOsakQGk1IH2_6h9cyYemmQ-UpY6A">
+
+    <meta name="author" content="Tanoka Studio">
+
+    <!-- Primary Meta Tags -->
+    <title>Download SamORai</title>
+    <meta name="title" content="Download SamORai" />
+    <meta name="description" content="Download and play now the latest game from Tanoka Studio, samOrai" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tanoka.studio/playsamorai/" />
+    <meta property="og:title" content="Download SamORai" />
+    <meta property="og:description" content="Download and play now the latest game from Tanoka Studio" />
+    <meta property="og:image" content="https://tanoka.studio/playsamorai/header.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tanoka.studio/playsamorai/" />
+    <meta property="twitter:title" content="Download SamORai" />
+    <meta property="twitter:description" content="Download and play now the latest game from Tanoka Studio" />
+    <meta property="twitter:image" content="https://tanoka.studio/playsamorai/header.png" />
+
+
+    <link rel="icon" type="image/png" href="Face.png">
+
 </head>
 
+<style>
+    @font-face {
+        font-family: go0v2;
+        src: url(go3v2.ttf);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: go0v2;
+        margin: 0;
+        height: 100vh;
+        background-color: #260C25;
+        overflow: hidden;
+    }
+
+
+    play-now-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: space-between;
+        flex-direction: column;
+    }
+
+    play-now-container>* {
+        display: block;
+        filter: drop-shadow(5px 5px 2px #2222);
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 8vh;
+        border-top: 0.5vh dashed black;
+        border-bottom: 0.5vh dashed black;
+        -webkit-transform: skewY(2deg);
+        transform: skewY(2deg);
+        transition: transform 0.2s ease-out 100ms
+    }
+
+    h1:hover{
+        transform: scale(150%);
+        user-select: none; /* Standard syntax */
+    }
+
+    .link {
+        text-decoration: none;
+        font-size: 4vh;
+        color: whitesmoke;
+        text-decoration: none;
+        margin: 0px 0px;
+        border-bottom: 0.5vh dotted whitesmoke;
+        z-index: 3;
+    }
+</style>
+
+<style>
+    .parallax-wrap {
+        //background-color: #260C25;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        //overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        top: 0;
+    }
+
+    .parallax-wrap span {
+
+        position: absolute;
+        display: block;
+        width: 120vw;
+        height: 100%;
+        pointer-events: none;
+        filter: blur(1px);
+        background-size: contain;
+        background-repeat: repeat-x;
+        background-position: bottom 20% center;
+        background-attachment: fixed;
+    }
+
+    .parallax-wrap span:first-child {
+        background-repeat: repeat;
+        background-size: fill;
+        filter: blur(0);
+        background-image: url('parallax/bk_001.png');
+    }
+
+    .parallax-wrap span:nth-child(2) {
+        background-image: url('parallax/bk_002.png');
+        background-color: #ffdbc30f;
+
+    }
+
+    .parallax-wrap span:nth-child(3) {
+        background-image: url('parallax/bk_003.png');
+        background-color: #ffdbc30f;
+    }
+
+    .parallax-wrap span:nth-child(4) {
+        background-image: url('parallax/bk_004.png');
+        background-color: #ffdbc30f;
+    }
+
+    .parallax-wrap span:nth-child(5) {
+        background-image: url('parallax/bk_005.png');
+        background-color: #ffdbc30f;
+    }
+
+    .parallax-wrap span:nth-child(6) {
+        background-image: url('parallax/bk_006.png');
+        filter: blur(0.3);
+        background-size: cover 90vh;
+        background-color: #ffdbc30f;
+    }
+
+    .parallax-wrap span:nth-child(7) {
+        background-image: url('parallax/bk_007.png');
+        filter: blur(0);
+        z-index: 3;
+        background-size: cover 150vh;
+        //background-color: #ffdbc30f;
+    }
+</style>
+
+<style>
+    .cross {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cross::before,
+    .cross::after {
+        content: '';
+        width: 150%;
+        position: absolute;
+        right: -25%;
+        top: 50%;
+        z-index: -1;
+    }
+
+    .cross::before {
+        border-bottom:  0.5vh dashed #2228;
+        -webkit-transform: skewY(-2deg);
+        transform: skewY(-2deg);
+    }
+</style>
+
 <body>
-  <nav>
-    <ul>
-      <li>
-        <h1><a href="../">SamOrai</a></h1>
-        <ul>
-          <li><a href="#factsheet">Factsheet</a></li>
-          <li><a href="#description">Description</a></li>
-          <!--<li><a href="#history">History</a></li>-->
-          <li><a href="#features">Features</a></li>
-          <li><a href="#videos">Videos</a></li>
-          <li><a href="#images">Images</a></li>
-          <li><a href="#logo-icon">Logo &amp; Icon</a></li>
-          <!--<li><a href="#awards-recognition">Awards &amp; Recognition</a></li>
-          <li><a href="#selected-articles">Selected Articles</a></li>
-        -->
-          <li><a href="#about">About Tanoka Studio</a></li>
-          <li><a href="#credits">Game Credits</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
 
-  <main>
-    <header>
-      <img src="./media/header.png">
-    </header>
 
-    <div id="intro-details">
-      <div id="factsheet" class="w-3 w-s-10">
-        <h2>Factsheet</h2>
-        <div><h3>Developer:</h3><address>Tanoka Studio<br>Based in Barcelona,<br>Catalonia</address></div>
-        <div><h3>Release Date:</h3><p>Summer 2024</p></div>
-        <div><h3>Platforms:</h3><p>
-          <a href="https://play.google.com/store/apps/details?id=com.tanokastudio.samorai" target="_blank">Android</a><br>
-        <div><h3>Website:</h3><p><a href="../playsamorai/index.html" target="_blank" class="external">Web</a></p></div>
-        <!-- <div><h3>Regular Price:</h3><p>USD $100<br>EU	€100</p> --></div>
-      </div>
-      <div id="description" class="w-7 w-s-10">
-        <div id="intro">
-          <h2>Description</h2>
-          <p>The samOrai of the school of the first dawn, must wipe out all the demons born from the souls of the miserable. Join him throughout his adventures, defeating enemies in more than 20 scenarios and with more than 10 outfits.
-
-Casual hack-and-slash game where you can compete with other users to reach the top of the leaderboards.
-          </p>
-        </div>
-        <!--<div id="history">
-          <h2>History</h2>
-          <p>
-            This game is the dream of four university students who for a long time had the dream of making a real video game and publish it for the world.
-With influences that go from "Stardew Valley" to "Enter the gungeon", we aim to create a unique but familiar video game that will pleasure many type of gamers all around the world.
-          </p>
-        </div>-->
-        <div id="features">
-          <h2>Features</h2>
-          <ul>
-            <li>Simple gameplay, addictive gameplay</li>
-            <li>Integration with Google Play Games with leaderboards and trophies</li>
-            <li>Wildly customizable</li>
-            <li>Great music and sound!</li>
-            <li>Beautiful characters and backgrounds</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div id="videos">
-      <h2>Videos</h2>
-      <p>Announcement trailer (2024)</p>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cs6k2jKohZI?si=erI_hmrPC0ezM1u1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div id="images">
-      <h2>Images</h2>
-      <p>download files as <a href="./media/images.zip" target="_blank">.zip (1.75 MB)</a></p>
-      <div class="w-10">
-        <a href="./media/screenshot-00.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-00.png"></a>
-        <a href="./media/screenshot-01.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-01.png"></a>
-        <a href="./media/screenshot-02.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-02.png"></a>
-        <a href="./media/screenshot-03.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-03.png"></a>
-        <a href="./media/screenshot-04.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-04.png"></a>
-    		<a href="./media/screenshot-05.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-05.png"></a>
-        <a href="./media/screenshot-06.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-06.png"></a>
-        <a href="./media/screenshot-07.png" target="_blank"><img class="i-2 i-s-10" src="./media/screenshot-07.png"></a>
-      </div>
-    </div>
-    <div id="logo-icon">
-      <h2>Logo</h2>
-      <p>download file as <a href="./media/logo.zip" target="_blank">.zip (181 KB)</a></p>
-      <div class="w-10">
-        <a href="./media/logo.png" target="_blank"><img src="./media/logo.png"></a>
-        <a href="./media/logo2.png" target="_blank"><img src="./media/logo2.png"></a>
-      </div>
-    </div>
-    <!-- <div id="awards-recognition">
-      <h2>Awards &amp; Recognition</h2>
-      <blockquote>
-        <ul>
-          <li>
-            <p><q>Winner, XX awards.</q></p>
-            <footer><p>- <em>game name, December 13, 2013</em></p></footer>
-          </li>
-          <li>
-            <p><q>Winner, YY awards.</q></p>
-            <footer><p>- <em>game name, December 13, 2013</em></p></footer>
-          </li>
-        </ul>
-      </blockquote>
-    </div>
-    <div id="selected-articles">
-      <h2>Selected Articles</h2>
-      <blockquote>
-        <ul>
-          <li>
-            <p><q>Put a quote here, from someone who talked about your game.</q></p>
-            <footer><p><em>- Person Name, <a href="//website.com" target="_blank" class="external">Website</a></em></p></footer>
-          </li>
-          <li>
-            <p><q>More quotes. Make sure to quote people properly! No trimming!</q><p>
-            <footer><p><em>- Person name, <a href="//website.com/" target="_blank" class="external">Site</a></em></p></footer>
-          </li>
-        </ul>
-      </blockquote>
-    </div>-->
-    <div id="about">
-      <h2>About Tanoka Studio</h2>
-      <!--
-      <h3>Boilerplate</h3>
-      <p>Find more about us <a href="../" target="_blank" class="external">here</a></p>
-      -->
-      <h3>More information</h3>
-      <p>More information on Tanoka Studio go to <a href="../">here</a>.
-      </p>
-    </div>
-    <div id="outro-details">
-      <div id="credits" class="w-5 w-xs-10">
-        <h2>Credits</h2>
-        <p><strong><a href=https://cataluna.cat/ class="external">PR, Programmer</a></strong><br>Luna Moreno</p>
-        <p><strong><a href=https://roughskin.itch.io/ class="external">Music, Programmer</a></strong><br>Oriol Perarnau</p>
-        <p><strong><a href=https://twitter.com/ButtSleeping class="external">Art</a></strong><br>Oriol Font</p>
-        <p><strong><a href=https://twitter.com/maya8carla class="external">Art</a></strong><br>Carla Maya</p>
-        <p><strong><a href=https://twitter.com/LilithuPrincess class="external">Writing</a></strong><br>Lilith Oliveras</p>
-      </div>
-      <div id="contact" class="w-5 w-xs-10">
-        <h2>Contact</h2>
-        <p><strong>Inquiries</strong><br><a href="mailto:info@tanoka.studio">info@tanoka.studio</a></p>
-        <p><strong>Twitter</strong><br><a href="https://twitter.com/tanokaStudio" target="_blank" class="external">twitter.com/tanokaStudio</a></p>
-        <p><strong>Instagram</strong><br><a href="https://instagram.com/tanokaStudio" target="_blank" class="external">instagram.com/tanokaStudio</a></p>
-        <p><strong>Web</strong><br><a href="https://tanoka.studio" target="_blank" class="external">tanoka.studio</a></p>
-      </div>
+    <!--div hide class="parallax-wrap">
+        <img src="parallax/bk_001.png" value="0" />
+        <img src="parallax/bk_002.png" value="0.2" />
+        <img src="parallax/bk_003.png" value="0.3" />
+        <img src="parallax/bk_004.png" value="0.6" />
+        <img src="parallax/bk_005.png" value="1" />
+        <img src="parallax/bk_006.png" value="2" />
+        <img src="parallax/bk_007.png" value="5" />
+    </div-->
+    <div class="parallax-wrap">
+        <span value="0"></span>
+        <span value="0.2"></span>
+        <span value="0.3"> </span>
+        <span value="0.6"> </span>
+        <span value="1"> </span>
+        <span value="2"> </span>
+        <span value="5"> </span>
+        <span value="5"
+            style="background-color:#260C25; position:absolute; bottom: 0;height: 15%; width: 150vw;"></span>
     </div>
 
-    <footer>
-      <p>
-        Adapted to be static from <a href="https://dopresskit.com/" target="_blank" class="external">presskit()</a>
-      </p>
-    </footer>
-  </main>
+    <play-now-container>
+        <h1 class="cross">Play now</h1>
+        <play-button>
+            <center>
+                <a href='https://play.google.com/store/apps/details?id=com.tanokastudio.samorai&utm_source=tanoka.studio&utm_campaign=tanoka.studio&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                    target="_blank">
+                    <img style="max-width:80%;max-height:80%;" alt='Get it on Google Play'
+                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+            </center>
+        </play-button>
+        <a href="https://youtu.be/cs6k2jKohZI" class="link" target="_blank">Watch trailer</a>
+        <a style="font-size: 2vh;color:blanchedalmond;" href="../samOraiPressKit/index.html" class="link" target="_blank">Learn
+            more</a>
+    </play-now-container>
 </body>
+
+<script>
+    function diff(a, b) { return a - b; }
+    function angDiff(x, y) { return Math.atan2(y, x); }
+    function deltaAngle(source, target) {
+        d = target - source
+        d = (d + 180) % 360 - 180
+        return d
+    }
+    document.addEventListener("mousemove", parallax);
+    function parallax(event) {
+        const multiplier = 10;
+        document.querySelectorAll(".parallax-wrap span").forEach((shift) => {
+            const position = shift.getAttribute("value");
+            const x = multiplier * (diff(window.innerWidth / 2.0, event.pageX) / window.innerWidth) * position;
+            const y = multiplier / 2 * (diff(window.innerHeight, event.pageY) / window.innerHeight) * position;
+
+            shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+    }
+    /*var initialGyroX = null;
+    var initialGyroY = null;
+    function orientation(event) {
+        var gyroX = event.gamma;
+        var gyroY = event.beta
+        if (initialGyroX == null) {
+            initialGyroX = gyroX;
+            initialGyroY = gyroY;
+            maxGyroX = initialGyroX;
+            maxGyroY = initialGyroY;
+        }
+        var deltaX = deltaAngle(initialGyroX, gyroX);
+        var deltaY = deltaAngle(initialGyroY, gyroY);
+
+        console.log("x", deltaX)
+        console.log("y", deltaY)
+        if (gyroX > maxGyroX) { maxGyroX = gyroX }
+        if (gyroY > maxGyroY) { maxGyroY = gyroY }
+        parallax({
+            pageX: (deltaAngle(initialGyroX, event.alpha) / 360) * window.innerWidth,
+            pageY: (deltaAngle(initialGyroY, event.beta) / 360) * window.innerHeight
+        })
+    }
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener("deviceorientation", orientation, false);
+    } else {
+        console.log("DeviceOrientationEvent is not supported");
+    }*/
+
+    /*const sensor = new AbsoluteOrientationSensor();
+    sensor.start();
+    sensor.addEventListener("error", (error) => {
+        if (event.error.name === "SecurityError")
+            console.log("No permissions to use AbsoluteOrientationSensor.");
+    });*/
+    window.addEventListener("deviceorientation", parallaxPhone);
+
+    function parallaxPhone(event) {
+        console.log(event)
+        const multiplier = 10;
+        document.querySelectorAll(".parallax-wrap span").forEach((shift) => {
+            const position = shift.getAttribute("value");
+
+            // Obtener los valores del giroscopio
+            let gamma = event.gamma * 2; // Inclinación izquierda/derecha
+            let beta = event.beta * 2; // Inclinación adelante/atrás
+
+            // Ajustar los valores del giroscopio para que funcionen correctamente
+            if (window.innerWidth > window.innerHeight) {
+                // Landscape mode
+                [gamma, beta] = [beta, -gamma];
+            } else {
+                // Portrait mode
+                [gamma, beta] = [-gamma, beta];
+            }
+
+            // Calcular los valores de desplazamiento
+            const x = multiplier * (diff(window.innerWidth / 2.0, gamma) / window.innerWidth) * position;
+            const y = multiplier * (diff(window.innerHeight / 2.0, beta) / window.innerHeight) * position;
+            shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+    }
+
+
+
+
+
+
+
+</script>
+
 </html>
